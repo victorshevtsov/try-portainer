@@ -2,6 +2,8 @@ version: '3.8'
 services:
   broker-au-1:
     image: registry.logstore:5000/logsn/broker
+    environment:
+      - REPLICA={{.Task.Slot}}
     ports:
       - 3001:3000
     deploy:
@@ -11,6 +13,8 @@ services:
 
   validator-au-1:
     image: registry.logstore:5000/logsn/validator
+    environment:
+      - REPLICA={{.Task.Slot}}
     ports:
       - 3002:3000
     deploy:
@@ -20,6 +24,8 @@ services:
 
   broker-eu-1:
     image: registry.logstore:5000/logsn/broker
+    environment:
+      - REPLICA={{.Task.Slot}}
     ports:
       - 3003:3000
     deploy:
@@ -29,6 +35,8 @@ services:
 
   validator-eu-1:
     image: registry.logstore:5000/logsn/validator
+    environment:
+      - REPLICA={{.Task.Slot}}
     ports:
       - 3004:3000
     deploy:
@@ -38,6 +46,8 @@ services:
 
   broker-us-1:
     image: registry.logstore:5000/logsn/broker
+    environment:
+      - REPLICA={{.Task.Slot}}
     ports:
       - 3005:3000
     deploy:
@@ -47,6 +57,8 @@ services:
 
   validator-us-1:
     image: registry.logstore:5000/logsn/validator
+    environment:
+      - REPLICA={{.Task.Slot}}
     ports:
       - 3006:3000
     deploy:

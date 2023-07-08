@@ -3,9 +3,9 @@ services:
   broker:
     image: registry.logstore:5000/logsn/broker
     ports:
-      - 3000:3000
+      - 3000:3001
 
   validator:
     image: registry.logstore:5000/logsn/broker
     ports:
-      - 3000:3000
+      - 3000:3002

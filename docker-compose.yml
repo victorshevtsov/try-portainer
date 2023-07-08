@@ -6,6 +6,6 @@ services:
       - 3001:3000
 
   validator:
-    image: registry.logstore:5000/logsn/broker
+    image: registry.logstore:5000/logsn/validator
     ports:
       - 3002:3000

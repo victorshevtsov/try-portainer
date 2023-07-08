@@ -4,6 +4,7 @@ var app = express();
 app.get('/', function (req, res) {
   res.json({
     app: "Broker",
+    ver: "1",
     env: process.env
   });
 });

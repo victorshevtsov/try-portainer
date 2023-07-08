@@ -1,5 +1,23 @@
 version: '3.8'
 services:
+  broker:
+    image: registry.logstore:5000/logsn/broker
+    environment:
+      - .DOCKER_SERVICE_ID={{.Service.ID}}
+      - .DOCKER_SERVICE_NAME={{.Service.Name}}
+      - .DOCKER_SERVICE_LABELS={{.Service.Labels}}
+      - .DOCKER_NODE_ID={{.Node.ID}}
+      - .DOCKER_NODE_HOSTNAME={{.Node.Hostname}}
+      - .DOCKER_TASK_ID={{.Task.ID}}
+      - .DOCKER_TASK_NAME={{.Task.Name}}
+      - .DOCKER_TASK_SLOT={{.Task.Slot}}
+    ports:
+      - 3000:3000
+    deploy:
+      placement:
+        constraints:
+          - node.labels.nodename==logsn-au-1
+
   broker-au-1:
     image: registry.logstore:5000/logsn/broker
     environment:

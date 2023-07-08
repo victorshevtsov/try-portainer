@@ -8,4 +8,4 @@ services:
   validator:
     image: registry.logstore:5000/logsn/broker
     ports:
-      - 3001:3000
+      - 3002:3000

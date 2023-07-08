@@ -7,7 +7,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.nodename==logsn-au-1
+          - node.labels.nodename==logsn-au-1
 
   validator-au-1:
     image: registry.logstore:5000/logsn/validator
@@ -16,7 +16,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.nodename==logsn-au-1
+          - node.labels.nodename==logsn-au-1
 
   broker-eu-1:
     image: registry.logstore:5000/logsn/broker
@@ -25,7 +25,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.nodename==logsn-eu-1
+          - node.labels.nodename==logsn-eu-1
 
   validator-eu-1:
     image: registry.logstore:5000/logsn/validator
@@ -34,7 +34,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.nodename==logsn-eu-1
+          - node.labels.nodename==logsn-eu-1
 
   broker-us-1:
     image: registry.logstore:5000/logsn/broker
@@ -43,7 +43,7 @@ services:
     deploy:
       placement:
         constraints:
-          - node.nodename==logsn-us-1
+          - node.labels.nodename==logsn-us-1
 
   validator-us-1:
     image: registry.logstore:5000/logsn/validator
@@ -52,4 +52,4 @@ services:
     deploy:
       placement:
         constraints:
-          - node.nodename==logsn-us-1
+          - node.labels.nodename==logsn-us-1

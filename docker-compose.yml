@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  broker:
+    image: registry.logstore:5000/logsn/broker
+    ports:
+      - 3000:3000
+
+  validator:
+    image: registry.logstore:5000/logsn/broker
+    ports:
+      - 3000:3000

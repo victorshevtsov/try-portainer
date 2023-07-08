@@ -3,7 +3,7 @@ services:
   broker-au-1:
     image: registry.logstore:5000/logsn/broker
     ports:
-      - 3011:3000
+      - 3001:3000
     deploy:
       placement:
         constraints:
@@ -12,7 +12,7 @@ services:
   validator-au-1:
     image: registry.logstore:5000/logsn/validator
     ports:
-      - 3012:3000
+      - 3002:3000
     deploy:
       placement:
         constraints:
@@ -21,7 +21,7 @@ services:
   broker-eu-1:
     image: registry.logstore:5000/logsn/broker
     ports:
-      - 3011:3000
+      - 3003:3000
     deploy:
       placement:
         constraints:
@@ -30,7 +30,7 @@ services:
   validator-eu-1:
     image: registry.logstore:5000/logsn/validator
     ports:
-      - 3012:3000
+      - 3004:3000
     deploy:
       placement:
         constraints:
@@ -39,7 +39,7 @@ services:
   broker-us-1:
     image: registry.logstore:5000/logsn/broker
     ports:
-      - 3011:3000
+      - 3005:3000
     deploy:
       placement:
         constraints:
@@ -48,7 +48,7 @@ services:
   validator-us-1:
     image: registry.logstore:5000/logsn/validator
     ports:
-      - 3012:3000
+      - 3006:3000
     deploy:
       placement:
         constraints:

@@ -2,7 +2,10 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  res.send(`Hello from Broker\n ${JSON.stringify(process.env, null, 2)}`);
+  res.json({
+    app: "Broker",
+    env: process.env
+  });
 });
 
 app.listen(3000, () => {

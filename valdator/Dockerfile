@@ -5,3 +5,5 @@ COPY ./package.json ./
 RUN npm i
 
 COPY ./ ./
+
+CMD [ "index.js" ]

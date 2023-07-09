@@ -2,8 +2,18 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
-  console.log(JSON.stringify(req, null, 2));
-  
+  console.log(JSON.stringify(
+    {
+      method: req.method,
+      url: req.url,
+      hostname: req.hostname,
+      headers: req.headers,
+      body: req.body
+    },
+    null,
+    2)
+  );
+
   res.json({
     app: "Broker",
     ver: "1",

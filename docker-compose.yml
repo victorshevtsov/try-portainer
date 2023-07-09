@@ -14,9 +14,7 @@ services:
     ports:
       - 3000:3000
     deploy:
-      placement:
-        constraints:
-          - node.labels.nodename==logsn-au-1
+      mode: global
 
   broker-au-1:
     image: registry.logstore:5000/logsn/broker

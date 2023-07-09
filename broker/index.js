@@ -2,6 +2,8 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res) {
+  console.log(JSON.stringify(req, null, 2));
+  
   res.json({
     app: "Broker",
     ver: "1",
